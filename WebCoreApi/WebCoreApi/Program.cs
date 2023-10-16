@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection.Metadata;
+using WebCoreApi.Data;
 using WebCoreApi.Models;
+using WebCoreApi.Services;
 
 namespace WebCoreApi
 {
@@ -31,6 +34,13 @@ namespace WebCoreApi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            builder.Services.AddScoped<SeedDataService>();
+
+            if (args.Contains("/seed"))
+            {
+                builder.EnsureSeedData(args).Wait();
+                return;
+            }
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
