@@ -6,5 +6,6 @@ namespace WebCoreApi.Models
     {
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
+        public virtual ICollection<AppUserRole> UserRoles { get; set; }
     }
 }
