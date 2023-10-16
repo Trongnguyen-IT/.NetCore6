@@ -4,7 +4,9 @@
  Net Core 6 \
  React js \
  SQL server \
- Docker \
+ EF Core\
+ JWT authenication/authorization\
+ Docker
 
 ## How to run project
  Seed data with "dotnet run /seed"
