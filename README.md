@@ -1,12 +1,24 @@
 # .NetCore6 Application
 
- Technical stack \
- Net Core 6 \
- React js \
- SQL server \
- EF Core\
- JWT authenication/authorization\
+	 Technical stack \
+	 Net Core 6 \
+	 React js \
+	 SQL server \
+	 EF Core\
+	 JWT authenication/authorization\
  Docker
 
-## How to run project
- Seed data with "dotnet run /seed"
+## Module
+
+	User\
+	Post\
+	Comment\
+	Like\
+	ViewCount\
+	Wheather\
+	Gold price\
+	Notification
+
+## How to run seed data
+
+	Seed data with "dotnet run /seed"
